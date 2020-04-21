@@ -1,0 +1,24 @@
+extends layout
+
+block content
+        h1 #{title}
+        p This is an Article Page!
+        p #{parag}
+        ul.list-group
+            each article, i in articles
+                if user
+                    if user._id == article.author
+                        li.list-group-item.back
+                            a.back(href="/article/"+article._id)=article.title
+                            div
+                                small.lefv by #{article.name}
+                    else 
+                        li.list-group-item
+                             a(href="/article/"+article._id)=article.title
+                             div
+                                small.lefv   by #{article.name}
+                else 
+                    li.list-group-item
+                        a(href="/article/"+article._id)=article.title
+                        div
+                            small .lefv   by #{article.name}

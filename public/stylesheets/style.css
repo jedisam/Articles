@@ -16,7 +16,15 @@
   background-color: rgb(54, 69, 82);
   color:white
 }
+.mr-btm{
+  margin-bottom: 15px;
+}
 .mycontainer{
   text-align: end;
   color: #15f800;
+  margin: 20px;
+}
+.mli{
+  color: #fff;
+  margin: 5;
 }
